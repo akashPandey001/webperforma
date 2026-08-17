@@ -1,0 +1,1211 @@
+<!--
+  WebPerforma one-page website.
+  Structure and content follow the supplied homepage mockup and project brief.
+  Replace the clearly marked placeholders with real project/client proof when available.
+-->
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>WebPerforma | WordPress, Shopify &amp; Performance Marketing</title>
+    <meta
+      name="description"
+      content="WebPerforma builds conversion-focused WordPress websites and Shopify stores backed by Meta Ads, Google Ads and performance marketing."
+    />
+
+    <!-- SEO / SOCIAL: replace example.com values when the real domain is live -->
+    <link rel="canonical" href="https://webperforma.com/" />
+    <meta
+      property="og:title"
+      content="WebPerforma | WordPress, Shopify & Performance Marketing"
+    />
+    <meta
+      property="og:description"
+      content="Conversion-focused WordPress websites and Shopify stores backed by Meta & Google Ads."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webperforma.com/" />
+    <meta property="og:image" content="https://webperforma.com/og-image.jpg" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23075fea'/%3E%3Cpath d='M13 19l9 27 10-19 10 19 9-27' fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Condensed:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      /* Apply the saved/system theme before CSS paints to minimize flash. */
+      (() => {
+        try {
+          const saved = localStorage.getItem("webperforma-theme");
+          const preferred = window.matchMedia("(prefers-color-scheme: dark)")
+            .matches
+            ? "dark"
+            : "light";
+          document.documentElement.dataset.theme = saved || preferred;
+        } catch (_) {}
+      })();
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="WebPerforma home"
+          >WEBPERFORMA</a
+        >
+
+        <div class="nav-actions">
+          <div class="nav-links" id="nav-menu">
+            <a href="#work">Work</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#process">Process</a>
+          </div>
+
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <svg
+              class="theme-icon theme-icon-sun"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
+              ></path>
+            </svg>
+            <svg
+              class="theme-icon theme-icon-moon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.7 15.1A8.5 8.5 0 0 1 8.9 3.3 8.6 8.6 0 1 0 20.7 15.1Z"
+              ></path>
+            </svg>
+            <span class="sr-only">Toggle color theme</span>
+          </button>
+
+          <a class="button button-primary nav-cta" href="#contact"
+            >Let's Talk</a
+          >
+
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Open navigation"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- =========================================================
+         HERO
+    ========================================================== -->
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow">
+              WORDPRESS <span>•</span> SHOPIFY <span>•</span> PERFORMANCE
+              MARKETING
+            </p>
+
+            <h1
+              class="hero-title"
+              aria-label="We build systems that scale your brand."
+            >
+              <span class="hero-line">
+                <span> WE BUILD <span class="hero-system">SYSTEM</span> </span>
+              </span>
+
+              <span class="hero-line">
+                <span>
+                  THAT SCALE YOUR <span class="hero-brand">BRAND.</span>
+                </span>
+              </span>
+            </h1>
+
+            <p class="hero-text">
+              Conversion-focused WordPress websites and Shopify stores, backed
+              by Meta &amp; Google Ads that drive real growth.
+            </p>
+
+            <div class="hero-buttons">
+              <a class="button button-primary arrow-button" href="#contact"
+                >Start Your Project <span aria-hidden="true">→</span></a
+              >
+              <a class="button button-secondary" href="#work">View Our Work</a>
+            </div>
+
+            <a
+              class="scroll-cue"
+              href="#growth-model"
+              aria-label="Scroll to the next section"
+            >
+              <span>SCROLL</span>
+              <svg viewBox="0 0 24 32" aria-hidden="true">
+                <path d="M12 1v26M5 20l7 7 7-7"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="hero-visual-wrap"
+            aria-label="Web development and performance marketing ecosystem"
+          >
+            <!-- ORBIT TRACKS -->
+            <div class="orbit orbit-meta" aria-hidden="true"></div>
+            <div class="orbit orbit-google" aria-hidden="true"></div>
+            <div class="orbit orbit-dev" aria-hidden="true"></div>
+            <div class="space-core" aria-label="WebPerforma growth system">
+              <div class="space-core-inner">
+                <span class="core-logo">W</span>
+
+                <span class="core-label"> WEBPERFORMA </span>
+
+                <small> BUILD • ACQUIRE • SCALE </small>
+              </div>
+            </div>
+
+            <!-- META ADS - OUTER ORBIT -->
+            <div class="orbit-carrier orbit-carrier-meta">
+              <div class="orbit-node">
+                <div class="orbit-upright">
+                  <div class="floating-badge badge-meta">
+                    <span class="badge-mark meta-mark">∞</span>
+
+                    <span>
+                      <strong>Meta Ads</strong>
+                      <small>Acquire traffic</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GOOGLE ADS - OUTER ORBIT -->
+            <div class="orbit-carrier orbit-carrier-google">
+              <div class="orbit-node">
+                <div class="orbit-upright">
+                  <div class="floating-badge badge-google">
+                    <span class="badge-mark google-mark">G</span>
+
+                    <span>
+                      <strong>Google Ads</strong>
+                      <small>Capture intent</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DEVELOPMENT - INNER ORBIT -->
+            <div class="orbit-carrier orbit-carrier-dev">
+              <div class="orbit-node">
+                <div class="orbit-upright">
+                  <div class="floating-badge badge-dev">
+                    <span class="badge-mark dev-mark">&lt;/&gt;</span>
+
+                    <span>
+                      <strong>Development</strong>
+                      <small>Build to convert</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         BUILD → ACQUIRE → CONVERT
+    ========================================================== -->
+      <section class="section compact-section growth-model" id="growth-model">
+        <div class="container">
+          <div class="mission-head reveal">
+            <p class="eyebrow">THE GROWTH SYSTEM</p>
+
+            <h2>ONE TRAJECTORY. THREE STAGES.</h2>
+
+            <p>
+              From building the platform to acquiring traffic and converting
+              demand, every stage works as one connected system.
+            </p>
+          </div>
+
+          <div class="mission-route reveal-sequence">
+            <!-- MOVING TRAJECTORY -->
+            <div class="mission-path" aria-hidden="true">
+              <span class="mission-energy"></span>
+            </div>
+
+            <!-- STAGE 01 -->
+            <article class="mission-stage reveal-step">
+              <div class="mission-node">
+                <span>01</span>
+              </div>
+
+              <div class="mission-card">
+                <div class="mission-status">
+                  <span class="status-dot"></span>
+                  SYSTEM INITIALIZED
+                </div>
+
+                <div class="mission-icon" aria-hidden="true">&lt;/&gt;</div>
+
+                <h3>BUILD</h3>
+
+                <p>Build the digital foundation designed for performance.</p>
+
+                <ul>
+                  <li>WordPress</li>
+                  <li>Shopify</li>
+                  <li>Ecommerce</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- STAGE 02 -->
+            <article class="mission-stage reveal-step">
+              <div class="mission-node">
+                <span>02</span>
+              </div>
+
+              <div class="mission-card">
+                <div class="mission-status">
+                  <span class="status-dot"></span>
+                  TRAFFIC ACQUIRED
+                </div>
+
+                <div class="mission-icon" aria-hidden="true">↗</div>
+
+                <h3>ACQUIRE</h3>
+
+                <p>
+                  Reach high-intent audiences across paid acquisition channels.
+                </p>
+
+                <ul>
+                  <li>Meta Ads</li>
+                  <li>Google Ads</li>
+                  <li>Retargeting</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- STAGE 03 -->
+            <article class="mission-stage reveal-step">
+              <div class="mission-node">
+                <span>03</span>
+              </div>
+
+              <div class="mission-card">
+                <div class="mission-status">
+                  <span class="status-dot"></span>
+                  GROWTH ENGINE ACTIVE
+                </div>
+
+                <div class="mission-icon" aria-hidden="true">↑</div>
+
+                <h3>CONVERT</h3>
+
+                <p>Turn traffic into measurable leads, sales and growth.</p>
+
+                <ul>
+                  <li>Landing Pages</li>
+                  <li>CRO</li>
+                  <li>Conversion Tracking</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section missions-section" id="work">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">MISSION LOGS / SELECTED WORK</p>
+        <h2 class="section-title">
+          WORK BUILT TO <span>MOVE NUMBERS.</span>
+        </h2>
+      </div>
+
+      <p class="section-intro">
+        Real project screenshots and verified results can drop into these cards later without changing the layout.
+      </p>
+    </div>
+
+
+    <div class="projects-grid">
+
+      <!-- =====================================================
+           PROJECT 01
+      ====================================================== -->
+      <article class="project-card reveal">
+
+        <div class="project-hud">
+          <span class="hud-status">
+            <i></i>
+            MISSION 01
+          </span>
+
+          <span>ECOMMERCE SYSTEM</span>
+        </div>
+
+
+        <div class="project-media project-fashion">
+
+          <!-- REAL PERFORMANCE PROOF GOES HERE -->
+          <!-- REPLACE WITH REAL PROJECT SCREENSHOT -->
+
+          <div class="desktop-frame">
+
+            <div class="browser-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="mock-site fashion-site">
+              <span>SUMMER</span>
+              <strong>COLLECTION</strong>
+              <em>SHOP NOW</em>
+            </div>
+
+          </div>
+
+
+          <div class="phone-frame">
+
+            <div class="phone-site fashion-site">
+              <span>SUMMER</span>
+              <strong>COLLECTION</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-body">
+
+          <p class="project-index">PROJECT 01</p>
+
+          <h3>Fashion Ecommerce</h3>
+
+          <p>
+            Shopify Development
+            <span>•</span>
+            Meta Ads
+          </p>
+
+          <div class="proof-badges">
+            <span>4.2x ROAS</span>
+            <span>3.8% CVR</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================================
+           PROJECT 02
+      ====================================================== -->
+      <article class="project-card reveal">
+
+        <div class="project-hud">
+          <span class="hud-status">
+            <i></i>
+            MISSION 02
+          </span>
+
+          <span>D2C SYSTEM</span>
+        </div>
+
+
+        <div class="project-media project-d2c">
+
+          <!-- ADD REAL SHOPIFY CASE STUDY SCREENSHOT HERE -->
+
+          <div class="desktop-frame">
+
+            <div class="browser-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="mock-site d2c-site">
+
+              <small>PURELY.</small>
+
+              <strong>
+                Clean Ingredients.<br>
+                Real Results.
+              </strong>
+
+              <div class="bottle-group" aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="phone-frame">
+
+            <div class="phone-site d2c-site">
+              <small>PURELY.</small>
+
+              <strong>
+                Clean<br>
+                Ingredients.
+              </strong>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-body">
+
+          <p class="project-index">PROJECT 02</p>
+
+          <h3>D2C Ecommerce Brand</h3>
+
+          <p>Shopify Development</p>
+
+          <div class="proof-badges">
+            <span>+32% Conversion Rate</span>
+            <span>+48% Revenue Growth</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================================
+           PROJECT 03
+      ====================================================== -->
+      <article class="project-card reveal">
+
+        <div class="project-hud">
+          <span class="hud-status">
+            <i></i>
+            MISSION 03
+          </span>
+
+          <span>LEAD GEN SYSTEM</span>
+        </div>
+
+
+        <div class="project-media project-business">
+
+          <!-- ADD REAL WORDPRESS + GOOGLE ADS PROOF HERE -->
+
+          <div class="desktop-frame">
+
+            <div class="browser-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="mock-site business-site">
+
+              <small>YOUR BUSINESS</small>
+
+              <strong>
+                A better website for a growing business.
+              </strong>
+
+              <em>GET A QUOTE</em>
+
+            </div>
+
+          </div>
+
+
+          <div class="phone-frame">
+
+            <div class="phone-site business-site">
+
+              <small>YOUR BUSINESS</small>
+
+              <strong>
+                Built to<br>
+                convert.
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-body">
+
+          <p class="project-index">PROJECT 03</p>
+
+          <h3>Business Website</h3>
+
+          <p>
+            WordPress Development
+            <span>•</span>
+            Google Ads
+          </p>
+
+          <div class="proof-badges">
+            <span>380+ Leads</span>
+            <span>₹420 Avg. CPL</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+</section>
+      <!-- =========================================================
+         RESULTS / BUSINESS PROOF
+    ========================================================== -->
+      <section class="section results-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">PROOF</p>
+              <h2 class="section-title">RESULTS THAT MATTER</h2>
+            </div>
+            <p class="section-intro">
+              All figures below are placeholders until verified business data is
+              added.
+            </p>
+          </div>
+
+          <!-- ========================================
+        REAL BUSINESS PROOF SECTION
+
+        Replace these placeholders with actual:
+        - ROAS
+        - conversion rate
+        - client revenue
+        - lead volume
+        - CPL
+        - website speed improvements
+        - ecommerce sales
+        ======================================== -->
+          <div class="metrics-grid">
+            <article class="metric-card reveal">
+              <span class="placeholder-label">Sample data</span>
+              <strong><span class="counter" data-target="12">0</span>+</strong>
+              <p>Websites / Stores Built</p>
+            </article>
+
+            <article class="metric-card reveal">
+              <span class="placeholder-label">Sample data</span>
+              <strong><span class="counter" data-target="4">0</span>x</strong>
+              <p>ROAS Generated</p>
+            </article>
+
+            <article class="metric-card reveal">
+              <span class="placeholder-label">Sample data</span>
+              <strong><span class="counter" data-target="250">0</span>+</strong>
+              <p>Qualified Leads</p>
+            </article>
+
+            <article class="metric-card reveal">
+              <span class="placeholder-label">Sample data</span>
+              <strong><span class="counter" data-target="18">0</span>%</strong>
+              <p>Conversion Improvement</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         DEVELOPMENT PROOF
+    ========================================================== -->
+      <section class="section proof-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">DEVELOPMENT PROOF</p>
+              <h2 class="section-title">BUILT FOR PERFORMANCE</h2>
+            </div>
+            <p class="section-intro">
+              Show the build quality, responsive execution and speed evidence
+              behind each project.
+            </p>
+          </div>
+
+          <div class="dev-proof-layout">
+            <div class="proof-browser reveal-left">
+              <div class="browser-chrome">
+                <span></span><span></span><span></span><i></i>
+              </div>
+
+              <!-- REPLACE WITH REAL WEBSITE SCREENSHOT -->
+              <div class="proof-screen">
+                <div class="screen-copy">
+                  <span>PERFORMANCE WEBSITE</span>
+                  <strong
+                    >Responsive.<br />Fast.<br />Conversion focused.</strong
+                  >
+                </div>
+                <div class="screen-ui"><i></i><i></i><i></i><i></i></div>
+              </div>
+
+              <div class="proof-phone">
+                <div>
+                  <span>MOBILE</span>
+                  <strong>RESPONSIVE<br />EXPERIENCE</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="dev-proof-cards">
+              <article class="mini-proof reveal">
+                <span class="mini-number">01</span>
+                <div>
+                  <h3>Responsive Development</h3>
+                  <p>
+                    Desktop, tablet and mobile layouts designed to stay sharp
+                    across breakpoints.
+                  </p>
+                </div>
+              </article>
+              <article class="mini-proof reveal">
+                <span class="mini-number">02</span>
+                <div>
+                  <h3>Speed Optimization</h3>
+                  <p>
+                    Swap this placeholder with real Lighthouse or PageSpeed
+                    evidence.
+                  </p>
+                </div>
+              </article>
+              <article class="mini-proof reveal">
+                <span class="mini-number">03</span>
+                <div>
+                  <h3>Custom WordPress / Shopify</h3>
+                  <p>
+                    Use real admin, theme or implementation screenshots here
+                    when ready.
+                  </p>
+                </div>
+              </article>
+              <article class="mini-proof reveal">
+                <span class="mini-number">04</span>
+                <div>
+                  <h3>Conversion-Focused UX</h3>
+                  <p>
+                    Show before/after design decisions and the outcomes they
+                    support.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="evidence-strip reveal">
+            <div>
+              <strong>90+ PAGESPEED</strong>
+              <span>Performance-optimized website builds</span>
+            </div>
+
+            <div>
+              <strong>UX IMPROVEMENTS</strong>
+              <span>Cleaner layouts built around conversion</span>
+            </div>
+
+            <div>
+              <strong>CUSTOM DEVELOPMENT</strong>
+              <span>WordPress & Shopify implementation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         PERFORMANCE MARKETING PROOF
+    ========================================================== -->
+      <section class="section marketing-proof">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">PERFORMANCE MARKETING</p>
+              <h2 class="section-title">CAMPAIGNS BUILT TO SCALE</h2>
+            </div>
+            <p class="section-intro">
+              A dashboard-inspired proof area ready for verified Meta Ads and
+              Google Ads data.
+            </p>
+          </div>
+
+          <div class="ad-dashboard-grid">
+            <article class="ad-dashboard reveal-left">
+              <header>
+                <div class="ad-platform">
+                  <span class="meta-mark">∞</span>
+                  <strong>Meta Ads</strong>
+                </div>
+                <span class="placeholder-label">Demo Campaign</span>
+              </header>
+
+              <!-- REPLACE WITH REAL META ADS MANAGER SCREENSHOT -->
+              <div
+                class="dashboard-chart"
+                aria-label="Placeholder ad performance chart"
+              >
+                <div class="chart-grid"></div>
+                <svg
+                  viewBox="0 0 600 180"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M0 150 C80 135, 100 118, 155 125 S245 90, 300 103 S405 58, 455 67 S535 24, 600 36"
+                  ></path>
+                </svg>
+              </div>
+              <div class="dashboard-metrics">
+                <div><span>Ad Spend</span><strong>₹85K</strong></div>
+                <div><span>Revenue</span><strong>₹3.6L</strong></div>
+                <div><span>ROAS</span><strong>4.2x</strong></div>
+                <div><span>Leads</span><strong>210+</strong></div>
+              </div>
+            </article>
+
+            <article class="ad-dashboard reveal-right">
+              <header>
+                <div class="ad-platform">
+                  <span class="google-mark">G</span><strong>Google Ads</strong>
+                </div>
+                <span class="placeholder-label">Demo Campaign</span>
+              </header>
+
+              <!-- REPLACE WITH REAL GOOGLE ADS SCREENSHOT -->
+              <div
+                class="dashboard-chart bars"
+                aria-label="Placeholder Google Ads chart"
+              >
+                <div class="chart-grid"></div>
+                <div class="bar-set" aria-hidden="true">
+                  <i style="--h: 35%"></i><i style="--h: 55%"></i
+                  ><i style="--h: 45%"></i><i style="--h: 70%"></i
+                  ><i style="--h: 60%"></i><i style="--h: 82%"></i
+                  ><i style="--h: 74%"></i><i style="--h: 92%"></i>
+                </div>
+              </div>
+              <div class="dashboard-metrics">
+                <div><span>Spend</span><strong>₹62K</strong></div>
+                <div><span>Conversions</span><strong>145</strong></div>
+                <div><span>CPL</span><strong>₹428</strong></div>
+                <div><span>Conversion Rate</span><strong>6.4%</strong></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         COMBINED VALUE PROPOSITION
+    ========================================================== -->
+      <section class="section funnel-section">
+        <div class="container">
+          <div class="funnel-panel reveal">
+            <div class="funnel-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path
+                  d="M7 38V17l17-9 17 9v21M13 38V20h22v18M20 38V26h8v12"
+                ></path>
+              </svg>
+            </div>
+            <div class="funnel-copy">
+              <h2>ONE TEAM.<br /><span>THE WHOLE FUNNEL.</span></h2>
+              <p>
+                No disconnect between the people building your website and the
+                people driving traffic to it.
+              </p>
+            </div>
+            <div class="funnel-flow" aria-label="Website to scale funnel">
+              <span>WEBSITE</span><i>→</i><span>TRACKING</span><i>→</i
+              ><span>ADS</span><i>→</i><span>CONVERSIONS</span><i>→</i
+              ><span>SCALE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         SERVICES
+    ========================================================== -->
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">SERVICES</p>
+              <h2 class="section-title">BUILD. ACQUIRE. CONVERT.</h2>
+            </div>
+            <p class="section-intro">
+              Development and performance marketing working as one growth
+              system.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <span class="service-number">01</span>
+              <div class="service-icon">&lt;/&gt;</div>
+              <h3>WordPress Development</h3>
+              <p>
+                Fast, responsive and conversion-focused WordPress websites built
+                around your business goals.
+              </p>
+              <div class="tag-row">
+                <span>Landing Pages</span><span>CRO</span
+                ><span>Speed Optimization</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="service-number">02</span>
+              <div class="service-icon">S</div>
+              <h3>Shopify Development</h3>
+              <p>
+                High-converting Shopify stores designed for ecommerce growth.
+              </p>
+              <div class="tag-row">
+                <span>Ecommerce</span><span>Tracking</span><span>CRO</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="service-number">03</span>
+              <div class="service-icon">∞</div>
+              <h3>Meta Ads</h3>
+              <p>
+                Performance-focused Meta campaigns built to generate qualified
+                traffic, leads and sales.
+              </p>
+              <div class="tag-row">
+                <span>Retargeting</span><span>Analytics</span
+                ><span>Tracking</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="service-number">04</span>
+              <div class="service-icon">G</div>
+              <h3>Google Ads</h3>
+              <p>
+                High-intent Google Ads campaigns focused on measurable business
+                outcomes.
+              </p>
+              <div class="tag-row">
+                <span>Search</span><span>Analytics</span
+                ><span>Optimization</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         ABOUT
+    ========================================================== -->
+      <section class="section about-section" id="about">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">ABOUT</p>
+              <h2 class="section-title">THE PEOPLE BEHIND WEBPERFORMA</h2>
+            </div>
+            <p class="section-intro">
+              A development + marketing partnership built around one shared
+              outcome: better performance.
+            </p>
+          </div>
+
+          <div class="people-grid">
+            <article class="person-card reveal">
+              <div
+                class="person-photo"
+                aria-label="Bitmoji-style portrait of Akash Pandey"
+              >
+                <img src="images/akash-pandey-avatar.png" alt="Akash Pandey" />
+              </div>
+              <div class="person-body">
+                <p class="role">WordPress & Shopify Developer</p>
+                <h3>Akash Pandey</h3>
+                <div class="tag-row">
+                  <span>WordPress</span>
+                  <span>Shopify</span>
+                  <span>Ecommerce</span>
+                  <span>Landing Pages</span>
+                  <span>CRO</span>
+                  <span>Website Performance</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="person-card reveal">
+              <div
+                class="person-photo"
+                aria-label="Bitmoji-style portrait of Rishabh Jha"
+              >
+                <img src="images/rishabh-jha-avatar.png" alt="Rishabh Jha" />
+              </div>
+              <div class="person-body">
+                <p class="role">Performance Marketing Specialist</p>
+                <h3>Rishabh Jha</h3>
+                <div class="tag-row">
+                  <span>Meta Ads</span>
+                  <span>Google Ads</span>
+                  <span>Campaign Strategy</span>
+                  <span>Retargeting</span>
+                  <span>Analytics</span>
+                  <span>Optimization</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         PROCESS
+    ========================================================== -->
+      <section class="section process-section" id="process">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">PROCESS</p>
+              <h2 class="section-title">HOW WEBPERFORMA WORKS</h2>
+            </div>
+          </div>
+
+          <div class="process-track" id="process-track">
+            <div class="process-line" aria-hidden="true"><span></span></div>
+
+            <article class="process-step">
+              <span class="step-number">01</span>
+              <div>
+                <h3>STRATEGY</h3>
+                <p>
+                  We research your business, audience and growth opportunity.
+                </p>
+              </div>
+            </article>
+            <article class="process-step">
+              <span class="step-number">02</span>
+              <div>
+                <h3>BUILD</h3>
+                <p>
+                  We design and develop a website or store built to convert.
+                </p>
+              </div>
+            </article>
+            <article class="process-step">
+              <span class="step-number">03</span>
+              <div>
+                <h3>LAUNCH</h3>
+                <p>Tracking, analytics and advertising campaigns go live.</p>
+              </div>
+            </article>
+            <article class="process-step">
+              <span class="step-number">04</span>
+              <div>
+                <h3>SCALE</h3>
+                <p>We test, optimize and scale what works.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         TESTIMONIALS
+    ========================================================== -->
+      <section class="section testimonials-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">TESTIMONIALS</p>
+              <h2 class="section-title">WHAT CLIENTS SAY</h2>
+            </div>
+            <p class="section-intro">
+              Use genuine client feedback here when approved for publication.
+            </p>
+          </div>
+
+          <div class="testimonials-grid">
+            <article class="testimonial-card reveal">
+              <span class="quote-mark">“</span>
+              <p>
+                The new website feels faster, cleaner and much easier for our
+                customers to navigate.
+              </p>
+              <footer>
+                <strong>ECOMMERCE CLIENT</strong>
+                <span>Shopify Development</span>
+              </footer>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <span class="quote-mark">“</span>
+              <p>
+                Our campaigns became much more structured, and we finally had
+                clear visibility into performance.
+              </p>
+              <footer>
+                <strong>LEAD GENERATION CLIENT</strong>
+                <span>Meta Ads • Google Ads</span>
+              </footer>
+            </article>
+
+            <article class="testimonial-card reveal">
+              <span class="quote-mark">“</span>
+              <p>
+                The biggest improvement was having development and marketing
+                handled together instead of separately.
+              </p>
+              <footer>
+                <strong>BUSINESS CLIENT</strong>
+                <span>WordPress • Performance Marketing</span>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         FINAL CTA
+         WhatsApp number is centralized in script.js for easy replacement.
+    ========================================================== -->
+      <section class="section final-cta" id="contact">
+        <div class="cta-lines" aria-hidden="true"></div>
+        <div class="container cta-inner reveal">
+          <p class="eyebrow eyebrow-on-dark">LET'S BUILD WHAT'S NEXT</p>
+          <h2>READY TO PERFORM BETTER?</h2>
+          <p>
+            Let's build the website and growth engine your business actually
+            needs.
+          </p>
+
+          <a
+            class="button whatsapp-button arrow-button js-whatsapp"
+            href="https://wa.me/918796050928"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4.1A8 8 0 1 1 20 11.5Z"
+              ></path>
+              <path
+                d="M9 8.5c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4 0 .7.6 1.1 1.6 2 2.7 2.6.3.2.5.1.7-.1l.7-.8c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.7-.5.5-1.3.8-2.2.6-1.2-.2-3.4-1-5.5-3-1.8-1.8-2.6-3.8-2.8-4.8-.2-.7.1-1.5.5-2Z"
+              ></path>
+            </svg>
+            WhatsApp Us <span aria-hidden="true">→</span>
+          </a>
+
+          <div class="social-row">
+            <a class="js-instagram" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+              Instagram @webperforma
+            </a>
+            <a
+              class="js-whatsapp"
+              href="https://wa.me/918796050928"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4.1A8 8 0 1 1 20 11.5Z"
+                ></path>
+              </svg>
+              WhatsApp <span class="js-whatsapp-display">87960 50928</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="#top">WEBPERFORMA</a>
+          <p>
+            WordPress <span>•</span> Shopify <span>•</span> Performance
+            Marketing
+          </p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">Process</a>
+          <a class="js-instagram" href="#" target="_blank" rel="noopener"
+            >Instagram</a
+          >
+          <a
+            class="js-whatsapp"
+            href="https://wa.me/918796050928"
+            target="_blank"
+            rel="noopener"
+            >WhatsApp</a
+          >
+        </nav>
+
+        <p class="copyright">
+          © <span id="year"></span> WebPerforma. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
