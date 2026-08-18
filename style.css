@@ -300,7 +300,6 @@ button {
   justify-content: space-between;
   gap: 20px;
 }
-
 .nav-actions {
   display: flex;
   align-items: center;
@@ -426,6 +425,29 @@ html[data-theme="dark"] .theme-icon-moon {
   transform: translateY(-6px) rotate(-45deg);
 }
 
+.brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 95px;
+  height: 58px;
+
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brand img {
+  display: block;
+
+  width: 95px;
+  height: 95px;
+
+  object-fit: cover;
+
+  transform: scale(1.55);
+}
 /* =========================================================
    4. HERO
 ========================================================= */
@@ -1617,11 +1639,7 @@ html[data-theme="dark"] .mission-card {
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 90% 20%,
-      rgba(7, 95, 234, 0.06),
-      transparent 32%
-    ),
+    radial-gradient(circle at 90% 20%, rgba(7, 95, 234, 0.06), transparent 32%),
     var(--off-white);
 }
 
@@ -1641,8 +1659,7 @@ html[data-theme="dark"] .mission-card {
 
   border-bottom: 1px solid var(--border);
 
-  background:
-    color-mix(in srgb, var(--blue) 2%, var(--surface));
+  background: color-mix(in srgb, var(--blue) 2%, var(--surface));
 
   color: var(--muted);
 
@@ -1689,27 +1706,14 @@ html[data-theme="dark"] .mission-card {
   pointer-events: none;
 
   background-image:
-    linear-gradient(
-      rgba(7, 95, 234, 0.045) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(7, 95, 234, 0.045) 1px,
-      transparent 1px
-    );
+    linear-gradient(rgba(7, 95, 234, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 95, 234, 0.045) 1px, transparent 1px);
 
   background-size: 38px 38px;
 
   opacity: 0.4;
 
-  mask-image:
-    linear-gradient(
-      135deg,
-      transparent 10%,
-      #000 55%,
-      transparent
-    );
+  mask-image: linear-gradient(135deg, transparent 10%, #000 55%, transparent);
 }
 
 /* =========================================================
@@ -1717,8 +1721,8 @@ html[data-theme="dark"] .mission-card {
 ========================================================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
 }
 
 .project-card {
@@ -1733,14 +1737,8 @@ html[data-theme="dark"] .mission-card {
     background-color 0.25s ease;
 }
 
-.project-card:nth-child(3) {
-  grid-column: 1 / -1;
-  max-width: calc(50% - 12px);
-}
-
 .project-card:hover {
-  border-color:
-    color-mix(in srgb, var(--blue) 45%, var(--border));
+  border-color: color-mix(in srgb, var(--blue) 45%, var(--border));
 
   box-shadow:
     0 20px 55px rgba(7, 95, 234, 0.12),
@@ -1757,8 +1755,7 @@ html[data-theme="dark"] .missions-section {
 }
 
 html[data-theme="dark"] .project-hud {
-  background:
-    color-mix(in srgb, var(--blue) 5%, var(--surface));
+  background: color-mix(in srgb, var(--blue) 5%, var(--surface));
 }
 
 .project-media {
@@ -2281,11 +2278,32 @@ html[data-theme="dark"] .project-hud {
   box-shadow: var(--shadow-sm);
 }
 
-.ad-dashboard header {
+.ad-dashboard > header {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+
   gap: 18px;
-  padding: 22px 24px;
+
+  width: 100%;
+  height: 76px;
+
+  padding: 0 24px;
+
+  box-sizing: border-box;
+
   border-bottom: 1px solid var(--border);
+}
+
+.ad-dashboard > img {
+  display: block;
+  width: 100%;
+  height: 270px;
+
+  object-fit: cover;
+  object-position: top;
+
+  background: #fff;
 }
 
 .ad-platform {
@@ -3629,5 +3647,16 @@ html[data-theme="dark"] .project-hud {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+}
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-brand img {
+  display: block;
+  width: auto;
+  height: 155px;
   object-fit: contain;
 }
